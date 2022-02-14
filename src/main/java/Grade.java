@@ -55,7 +55,7 @@ public class Grade {
   }
 
   /**
-   * Determines whether or not two grades are equal. Two instances of Grade are equal if the values
+   * Determines whether two grades are equal. Two instances of Grade are equal if the values
    * of their {@code value} member field are the same.
    * @param o  an object to be compared with this Grade
    * @return {@code true} if the object to be compared is an instance of Grade and has the same value; {@code false}

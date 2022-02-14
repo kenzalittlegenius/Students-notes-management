@@ -5,7 +5,7 @@ import java.io.PrintStream;
 
 public class StandardOutputSandbox implements Runnable {
   static String NEW_LINE = System.getProperty("line.separator");
-  private Runnable runnable;
+  private final Runnable runnable;
   private OutputStream outputStream;
 
   StandardOutputSandbox(Runnable runnable) {

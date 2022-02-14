@@ -1,21 +1,22 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class TestTeachingUnitResult {
-  private static TeachingUnitResult twentyAtProg =
+  private static final TeachingUnitResult twentyAtProg =
           new TeachingUnitResult("Programmation 2", TestGrade.twenty);
-  private static TeachingUnitResult zeroAtStructDiscrete =
+  private static final TeachingUnitResult zeroAtStructDiscrete =
           new TeachingUnitResult("Structures discrètes", TestGrade.zero);
 
   @Test
   void testGetGrade() {
-    assertEquals(TestGrade.twenty, twentyAtProg.getGrade());
-    assertEquals(TestGrade.zero, zeroAtStructDiscrete.getGrade());
+    assertThat(twentyAtProg.getGrade()).isEqualTo(TestGrade.twenty);
+    assertThat(zeroAtStructDiscrete.getGrade()).isEqualTo(TestGrade.zero);
   }
 
   @Test
   void testToString() {
-    assertEquals("Programmation 2 : 20.0/20", twentyAtProg.toString());
-    assertEquals("Structures discrètes : 0.0/20", zeroAtStructDiscrete.toString());
+    assertThat(twentyAtProg.toString()).isEqualTo("Programmation 2 : 20.0/20");
+    assertThat(zeroAtStructDiscrete.toString()).isEqualTo("Structures discrètes : 0.0/20");
   }
 }
