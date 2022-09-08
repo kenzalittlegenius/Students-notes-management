@@ -1,11 +1,12 @@
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class TestCohort {
+class CohortTest {
   private static final Cohort cohort = new Cohort("L2 informatique");
   private static final Student davidGoodenough = new Student("David", "Goodenough");
   private static final Student jeanMichelBruitage = new Student("Jean-Michel", "Bruitage");
@@ -13,23 +14,27 @@ class TestCohort {
 
   @BeforeAll
   static void addStudentsToCohort(){
-    jeanMichelBruitage.addResult("Programmation 2", TestGrade.zero);
-    jeanMichelBruitage.addResult("Structures discrètes", TestGrade.twenty);
-    davidGoodenough.addResult("Programmation 2", TestGrade.ten);
-    davidGoodenough.addResult("Structures discrètes", TestGrade.ten);
+    jeanMichelBruitage.addResult("Programmation 2", GradeTest.zero);
+    jeanMichelBruitage.addResult("Structures discrètes", GradeTest.twenty);
+    davidGoodenough.addResult("Programmation 2", GradeTest.ten);
+    davidGoodenough.addResult("Structures discrètes", GradeTest.ten);
     cohort.addStudent(davidGoodenough);
     cohort.addStudent(jeanMichelBruitage);
   }
+
+  @Disabled("Disabled until Cohort is coded")
   @Test
   void testGetStudentsIsEmpty_whenEmptyCohort(){
     assertThat(l1Descartes.getStudents()).isEmpty();
   }
 
+  @Disabled("Disabled until Cohort is coded")
   @Test
   void testGetStudents_whenCohortContainsStudents(){
     assertThat(cohort.getStudents()).isEqualTo(List.of(davidGoodenough, jeanMichelBruitage));
   }
 
+  @Disabled("Disabled until Cohort is coded")
   @Test
   void testPrintStudentsResults_whenCohortIsEmpty() {
     StandardOutputSandbox standardOutputSandbox = new StandardOutputSandbox(l1Descartes::printStudentsResults);
@@ -38,6 +43,7 @@ class TestCohort {
     assertThat(standardOutputSandbox.getProducedOutput()).isEqualTo(expectedOutput);
   }
 
+  @Disabled("Disabled until Cohort is coded")
   @Test
   void testPrintStudentsResults_whenCohortContainsStudents() {
     StandardOutputSandbox standardOutputSandbox = new StandardOutputSandbox(cohort::printStudentsResults);
