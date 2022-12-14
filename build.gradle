@@ -3,7 +3,7 @@ plugins {
     id "java"
 }
 
-group 'M2_DLAD'
+group 'L3_MI'
 version '1.0-SNAPSHOT'
 
 repositories {
