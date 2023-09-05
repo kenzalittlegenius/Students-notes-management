@@ -3,7 +3,7 @@ plugins {
     id "java"
 }
 
-group 'L3_MI'
+group 'M2_BIO_INFO'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -11,9 +11,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation('org.junit.jupiter:junit-jupiter-api:5.9.0',
-            'org.assertj:assertj-core:3.23.1')
-    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.9.0')
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.10.0',
+            'org.assertj:assertj-core:3.24.2')
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
 }
 
 test {
