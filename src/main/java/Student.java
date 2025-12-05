@@ -30,7 +30,8 @@ public class Student {
    * @param grade the grade of the added result
    */
   public void addResult(String teachingUnitName, Grade grade){
-    // TODO : add code
+      TeachingUnitResult result =  new TeachingUnitResult(teachingUnitName, grade);
+      results.add(result);
   }
 
   /**
@@ -39,8 +40,8 @@ public class Student {
    */
   @Override
   public String toString() {
-    // TODO : change code
-    return null;
+
+    return firstName + " " + lastName;
   }
 
 
@@ -49,9 +50,13 @@ public class Student {
    *
    * @return the grades of the student
    */
-  public List<Grade> getGrades(){
-    // TODO : change code
-    return null;
+  public List<TeachingUnitResult> getGrades(){
+    // return the grade relating to the results
+      for(TeachingUnitResult result : results){
+
+      }
+
+    return this.results;
   }
 
   /**
@@ -60,8 +65,8 @@ public class Student {
    * @return the average grade of the student
    */
   public Grade averageGrade() {
-    // TODO : change code
-    return null;
+      results.getGrades();
+      return null;
   }
 
   /**
@@ -74,7 +79,7 @@ public class Student {
 
 
   /**
-   * Determines whether or not two students are equal. Two instances of Student are equal if the values
+   * Determines regardless or whether two students are equal. Two instances of Student are equal if the values
    * of their {@code firtName}  and {@code lastName} member fields are the same.
    * @param o  an object to be compared with this Student
    * @return {@code true} if the object to be compared is an instance of Student and has the same name; {@code false}
@@ -101,8 +106,6 @@ public class Student {
     result = 31 * result + lastName.hashCode();
     return result;
   }
-
-
 
 
 }

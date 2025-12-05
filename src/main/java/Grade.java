@@ -8,6 +8,7 @@ public class Grade {
   /**
    * The maximum value of a grade.
    */
+  //Attributes accessible only from the class itself
   private static final int MAXIMUM_GRADE = 20;
   private final double value;
 
@@ -16,7 +17,7 @@ public class Grade {
    *
    * @param value the value of the constructed grade
    */
-
+  //Constructor accessible
   public Grade(double value) {
     this.value = value;
   }
@@ -26,10 +27,10 @@ public class Grade {
    *
    * @return the value of the grade
    */
-
+    //getter allows to access the value of value beyond the class
   public double getValue() {
-    // TODO : change code
-    return 0.;
+      // this function read and return a value
+    return this.value;
   }
 
   /**
@@ -37,9 +38,10 @@ public class Grade {
    * @return a string representation of the grade
    */
   @Override
+
   public String toString() {
-    // TODO : change code
-    return null;
+    // return the grade as a string value
+      return this.value + "/" + MAXIMUM_GRADE;
   }
 
   /**
@@ -50,8 +52,18 @@ public class Grade {
    * @return a grade corresponding to the mean of grade in {@code grades}
    */
   public static Grade averageGrade(List<Grade> grades){
-    // TODO : change code
-    return null;
+    // compute and send the average in a list of grades
+
+      //averageGrade's type should be a double
+      double average = 0;
+      double sum = 0;
+      for (Grade grade : grades) {
+
+          sum += grade.getValue();
+      }
+      average += sum / (grades.size());
+
+      return new Grade(average);
   }
 
   /**

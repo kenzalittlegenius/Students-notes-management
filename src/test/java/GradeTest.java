@@ -14,7 +14,7 @@ class GradeTest {
   private static final List<Grade> grades = List.of(zero, twenty, ten);
   private static final List<Grade> gradesZero = List.of(zero, zero);
 
-  @Disabled("Disabled until Grade is coded")
+  //@Disabled("Disabled until Grade is coded")
   @Test
   void testHashCode(){
     assertThat(twenty.hashCode()).isEqualTo(new Grade(20).hashCode())
@@ -22,7 +22,7 @@ class GradeTest {
             .isNotEqualTo(zero.hashCode());
   }
 
-  @Disabled("Disabled until Grade is coded")
+  //@Disabled("Disabled until Grade is coded")
   @Test
   void testEquals(){
     assertThat(twenty).isEqualTo(new Grade(20))
@@ -33,7 +33,7 @@ class GradeTest {
             .isNotEqualTo(20.0);
   }
 
-  @Disabled("Disabled until Grade is coded")
+  //@Disabled("Disabled until Grade is coded")
   @Test
   void testGetValue() {
     assertThat(twenty.getValue()).isCloseTo(20, within(EPSILON));
@@ -48,7 +48,7 @@ class GradeTest {
 
   }
 
-  @Disabled("Disabled until Grade is coded")
+  //@Disabled("Disabled until Grade is coded")
   @Test
   void testAverageGrade(){
     assertThat(Grade.averageGrade(grades)).isEqualTo(ten);

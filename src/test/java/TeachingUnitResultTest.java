@@ -9,14 +9,14 @@ class TeachingUnitResultTest {
   private static final TeachingUnitResult zeroAtStructDiscrete =
           new TeachingUnitResult("Structures discrètes", GradeTest.zero);
 
-  @Disabled("Disabled until TeachingUnitResult is coded")
+  //@Disabled("Disabled until TeachingUnitResult is coded")
   @Test
   void testGetGrade() {
     assertThat(twentyAtProg.getGrade()).isEqualTo(GradeTest.twenty);
     assertThat(zeroAtStructDiscrete.getGrade()).isEqualTo(GradeTest.zero);
   }
 
-  @Disabled("Disabled until TeachingUnitResult is coded")
+  //@Disabled("Disabled until TeachingUnitResult is coded")
   @Test
   void testToString() {
     assertThat(twentyAtProg.toString()).isEqualTo("Programmation 2 : 20.0/20");
