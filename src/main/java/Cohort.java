@@ -24,7 +24,7 @@ public class Cohort {
    * @param student the student to be added to the cohort
    */
   public void addStudent(Student student){
-    // TODO : add code
+      students.add(student);
   }
 
   /**
@@ -32,8 +32,7 @@ public class Cohort {
    * @return the list of students of the cohort.
    */
   public List<Student> getStudents(){
-    // TODO : change code
-    return null;
+    return this.students;
   }
 
   /**
@@ -41,7 +40,13 @@ public class Cohort {
    * grade.
    */
   public void printStudentsResults(){
-    // TODO : add code
+      System.out.println(name);
+
+      for(Student student : students){
+          System.out.println(student);
+          System.out.println(student.averageGrade());
+      }
+
   }
 
   /**
@@ -50,7 +55,6 @@ public class Cohort {
    */
   @Override
   public String toString() {
-    // TODO : change code
-    return null;
+    return name + " ";
   }
 }

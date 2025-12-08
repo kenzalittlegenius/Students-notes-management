@@ -52,11 +52,7 @@ public class Student {
    */
   public List<TeachingUnitResult> getGrades(){
     // return the grade relating to the results
-      for(TeachingUnitResult result : results){
-
-      }
-
-    return this.results;
+      return this.results;
   }
 
   /**
@@ -65,7 +61,19 @@ public class Student {
    * @return the average grade of the student
    */
   public Grade averageGrade() {
-      results.getGrade(); // il y a une erreur avec getGrade ?!
+
+      //don't forget the base case
+      if(results.isEmpty()){
+          return new Grade(0);
+      }
+
+      double sum = 0.0;
+      for (TeachingUnitResult result : results){
+          sum += result.getGrade().getValue();
+      }
+
+      double average = sum / results.size();
+
       return null;
   }
 
@@ -74,7 +82,13 @@ public class Student {
    * the average grade of the student.
    */
   public void printResults(){
-    // TODO : add code
+    System.out.println( firstName + " " + lastName);
+    for (TeachingUnitResult result : results){
+        System.out.println( "- " + result.toString());
+    }
+    System.out.println("Average: " + averageGrade());
+
+
   }
 
 
