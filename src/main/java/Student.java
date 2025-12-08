@@ -60,11 +60,11 @@ public class Student {
    *
    * @return the average grade of the student
    */
-  public Grade averageGrade() {
+  public double averageGrade() {
 
       //don't forget the base case
       if(results.isEmpty()){
-          return new Grade(0);
+          return new Grade(0).getValue();
       }
 
       double sum = 0.0;
@@ -72,9 +72,7 @@ public class Student {
           sum += result.getGrade().getValue();
       }
 
-      double average = sum / results.size();
-
-      return null;
+      return sum / results.size();
   }
 
   /**
